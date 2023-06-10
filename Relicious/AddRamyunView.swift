@@ -11,6 +11,11 @@ struct MultiPicker: View  {
 
     typealias Label = String
     typealias Entry = String
+    
+    
+    @State var name: String = ""
+    @State var calorie: String = ""
+    
 
     let data: [ (Label, [Entry]) ]
     @Binding var selection: [Entry]
@@ -31,7 +36,30 @@ struct MultiPicker: View  {
                 }
             }
         }
+        
+        VStack {
+            HStack(alignment: .center) {
+                Text("라면명 :")
+                    .font(.callout)
+                    .bold()
+                    .frame(width: 70)
+                TextField("라면 이름을 입력해주세요.", text: $name)
+                    .padding()
+                    .background(Color(uiColor: .secondarySystemBackground))
+            }
+            
+            HStack(alignment: .center) {
+                Text("칼로리 :")
+                    .font(.callout)
+                    .bold()
+                    .frame(width: 70)
+                TextField("칼로리를 입력해주세요.", text: $calorie)
+                    .padding()
+                    .background(Color(uiColor: .secondarySystemBackground))
+            }
+        }
     }
+    
 }
 
 struct AddRamyunView: View {
