@@ -15,6 +15,7 @@
 		5553B0E22A34308500C78991 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0E12A34308500C78991 /* AppIntent.swift */; };
 		5553B0E42A34308600C78991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5553B0E32A34308600C78991 /* Assets.xcassets */; };
 		5553B0E82A34308600C78991 /* RamenTimerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E43492A343E6000F2B855 /* Ramyun.swift */; };
 		B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */; };
 		B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */; };
 		B9AD0EAE2A3421C300F19CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9AD0EAD2A3421C300F19CD9 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		5553B0E12A34308500C78991 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		5553B0E32A34308600C78991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5553B0E52A34308600C78991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90E43492A343E6000F2B855 /* Ramyun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramyun.swift; sourceTree = "<group>"; };
 		B9AD0EA62A3421C200F19CD9 /* Relicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliciousApp.swift; sourceTree = "<group>"; };
 		B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			path = RamenTimerWidget;
 			sourceTree = "<group>";
 		};
+		B90E43482A343E3F00F2B855 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B90E43492A343E6000F2B855 /* Ramyun.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B9AD0E9D2A3421C200F19CD9 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		B9AD0EA82A3421C200F19CD9 /* Relicious */ = {
 			isa = PBXGroup;
 			children = (
+				B90E43482A343E3F00F2B855 /* Entity */,
 				B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */,
 				B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */,
 				B9AD0EAD2A3421C300F19CD9 /* Assets.xcassets */,
@@ -254,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */,
 				B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */,
 				B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */,
 			);
