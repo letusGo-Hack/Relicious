@@ -16,6 +16,12 @@
 		5553B0E22A34308500C78991 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0E12A34308500C78991 /* AppIntent.swift */; };
 		5553B0E42A34308600C78991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5553B0E32A34308600C78991 /* Assets.xcassets */; };
 		5553B0E82A34308600C78991 /* RamenTimerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5553B0EE2A344A2A00C78991 /* RamenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0ED2A344A2A00C78991 /* RamenEntry.swift */; };
+		5553B0EF2A344AAB00C78991 /* RamenEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0ED2A344A2A00C78991 /* RamenEntry.swift */; };
+		5553B0F12A344AC400C78991 /* RamenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F02A344AC400C78991 /* RamenProvider.swift */; };
+		5553B0F22A344AC400C78991 /* RamenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F02A344AC400C78991 /* RamenProvider.swift */; };
+		5553B0F42A344F3100C78991 /* Ramen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F32A344F3100C78991 /* Ramen.intentdefinition */; };
+		5553B0F52A344F3100C78991 /* Ramen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F32A344F3100C78991 /* Ramen.intentdefinition */; };
 		B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E43492A343E6000F2B855 /* Ramyun.swift */; };
 		B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */; };
 		B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */; };
@@ -58,6 +64,10 @@
 		5553B0E12A34308500C78991 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		5553B0E32A34308600C78991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5553B0E52A34308600C78991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5553B0ED2A344A2A00C78991 /* RamenEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenEntry.swift; sourceTree = "<group>"; };
+		5553B0F02A344AC400C78991 /* RamenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenProvider.swift; sourceTree = "<group>"; };
+		5553B0F32A344F3100C78991 /* Ramen.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Ramen.intentdefinition; sourceTree = "<group>"; };
+		5553B0F62A344F4A00C78991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B90E43492A343E6000F2B855 /* Ramyun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramyun.swift; sourceTree = "<group>"; };
 		B9AD0EA62A3421C200F19CD9 /* Relicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliciousApp.swift; sourceTree = "<group>"; };
@@ -101,6 +111,9 @@
 				5553B0DB2A34308500C78991 /* RamenTimerWidgetBundle.swift */,
 				5553B0DD2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift */,
 				5553B0DF2A34308500C78991 /* RamenTimerWidget.swift */,
+				5553B0F32A344F3100C78991 /* Ramen.intentdefinition */,
+				5553B0ED2A344A2A00C78991 /* RamenEntry.swift */,
+				5553B0F02A344AC400C78991 /* RamenProvider.swift */,
 				5553B0E12A34308500C78991 /* AppIntent.swift */,
 				5553B0E32A34308600C78991 /* Assets.xcassets */,
 				5553B0E52A34308600C78991 /* Info.plist */,
@@ -138,6 +151,7 @@
 		B9AD0EA82A3421C200F19CD9 /* Relicious */ = {
 			isa = PBXGroup;
 			children = (
+				5553B0F62A344F4A00C78991 /* Info.plist */,
 				B90E43482A343E3F00F2B855 /* Entity */,
 				B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */,
 				B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */,
@@ -257,10 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5553B0F22A344AC400C78991 /* RamenProvider.swift in Sources */,
 				5553B0DE2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift in Sources */,
 				5553B0E22A34308500C78991 /* AppIntent.swift in Sources */,
 				5553B0E02A34308500C78991 /* RamenTimerWidget.swift in Sources */,
 				5553B0DC2A34308500C78991 /* RamenTimerWidgetBundle.swift in Sources */,
+				5553B0EF2A344AAB00C78991 /* RamenEntry.swift in Sources */,
+				5553B0F52A344F3100C78991 /* Ramen.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5553B0F12A344AC400C78991 /* RamenProvider.swift in Sources */,
+				5553B0F42A344F3100C78991 /* Ramen.intentdefinition in Sources */,
+				5553B0EE2A344A2A00C78991 /* RamenEntry.swift in Sources */,
 				B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */,
 				B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */,
 				3C00E2F02A3448E200EF2040 /* AddRamyunView.swift in Sources */,
@@ -477,6 +497,7 @@
 				DEVELOPMENT_TEAM = 5BY5MQ6875;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Relicious/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,6 +529,7 @@
 				DEVELOPMENT_TEAM = 5BY5MQ6875;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Relicious/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

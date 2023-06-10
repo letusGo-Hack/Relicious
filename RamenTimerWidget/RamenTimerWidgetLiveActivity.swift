@@ -72,9 +72,9 @@ extension RamenTimerWidgetAttributes.ContentState {
      }
 }
 
-#Preview("Notification", as: .content, using: RamenTimerWidgetAttributes.preview) {
-   RamenTimerWidgetLiveActivity()
-} contentStates: {
-    RamenTimerWidgetAttributes.ContentState.smiley
-    RamenTimerWidgetAttributes.ContentState.starEyes
-}
+//#Preview("Notification", as: .content, using: RamenTimerWidgetAttributes.preview) {
+//   RamenTimerWidgetLiveActivity()
+//} contentStates: {
+//    RamenTimerWidgetAttributes.ContentState.smiley
+//    RamenTimerWidgetAttributes.ContentState.starEyes
+//}
