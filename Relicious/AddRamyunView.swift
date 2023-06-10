@@ -38,6 +38,41 @@ struct MultiPicker: View  {
     
 }
 
+struct ImagePicker: UIViewControllerRepresentable {
+    @Binding var image: UIImage?
+    @Environment(\.presentationMode) var mode
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+}
+
+extension ImagePicker {
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        let parent: ImagePicker
+        
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            guard let image = info[.originalImage] as? UIImage else { return }
+            parent.image = image
+            parent.mode.wrappedValue.dismiss()
+        }
+    }
+}
+
 struct AddRamyunView: View {
     @State var name: String = ""
     @State var calorie: String = ""
@@ -48,33 +83,68 @@ struct AddRamyunView: View {
     ]
     @State var selection: [String] = [0, 0].map { "\($0)" }
     
+    @Environment(\.dismiss) var dismiss
+    
+    @State var showImagePicker = false
+    @State var selectedUIImage: UIImage?
+    @State var image: Image?
+    
+    func loadImage() {
+        guard let selectedImage = selectedUIImage else { return }
+        image = Image(uiImage: selectedImage)
+    }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             HStack {
                 Button("취소\n버튼") {
-                    // 실행할 코드
+                    dismiss()
                 }
                 
+                Spacer()
+                
                 Button("저장\n버튼") {
-                    // 실행할 코드
-                }.padding([.leading], 160)
+                    
+                    
+                    dismiss()
+                }
             }
             .border(.red)
+            
             Spacer()
             
             MultiPicker(data: data, selection: $selection)
                 .frame(height: 200)
             
             Spacer()
-            HStack {
-                Image("")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .aspectRatio(contentMode: .fill)
-                    .border(.pink)
+            VStack(spacing: 20) {
                 
-                Button("라면이미지 \n 추가버튼") {
-                    // 실행할 코드
+                
+            }
+            HStack {
+                
+                if let image = image {
+                    image
+                        .resizable()
+                        .clipShape(Circle())
+                        .frame(width: 120, height: 120)
+                } else {
+                    Image(systemName: "plus.viewfinder")
+                        .resizable()
+                        .foregroundColor(.blue)
+                        .frame(width: 120, height: 120)
+                }
+                
+                
+                Button {
+                    showImagePicker.toggle()
+                } label: {
+                    Text("라면이미지 \n 추가버튼")
+                }
+                .sheet(isPresented: $showImagePicker, onDismiss: {
+                    loadImage()
+                }) {
+                    ImagePicker(image: $selectedUIImage)
                 }.padding([.leading, .trailing], 40)
             }
             .border(.purple)
@@ -101,6 +171,7 @@ struct AddRamyunView: View {
             }
             Spacer()
         }
+        .padding([.leading, .trailing], 30)
     }
 }
 
