@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 struct Ramyun: Identifiable {
     let id: UUID
@@ -19,6 +20,12 @@ struct Ramyun: Identifiable {
     let calorie: Int?
     // 라면 시간
     let time: Double
+    
+    var isRunnging: Bool = false
+    
+    var counter = 0
+    
+    var timer: Publishers.Autoconnect<Timer.TimerPublisher>?
     
     init(
         name: String,
