@@ -7,13 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5553B0D72A34308500C78991 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553B0D62A34308500C78991 /* WidgetKit.framework */; };
+		5553B0D92A34308500C78991 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553B0D82A34308500C78991 /* SwiftUI.framework */; };
+		5553B0DC2A34308500C78991 /* RamenTimerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0DB2A34308500C78991 /* RamenTimerWidgetBundle.swift */; };
+		5553B0DE2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0DD2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift */; };
+		5553B0E02A34308500C78991 /* RamenTimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0DF2A34308500C78991 /* RamenTimerWidget.swift */; };
+		5553B0E22A34308500C78991 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0E12A34308500C78991 /* AppIntent.swift */; };
+		5553B0E42A34308600C78991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5553B0E32A34308600C78991 /* Assets.xcassets */; };
+		5553B0E82A34308600C78991 /* RamenTimerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */; };
 		B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */; };
 		B9AD0EAE2A3421C300F19CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9AD0EAD2A3421C300F19CD9 /* Assets.xcassets */; };
 		B9AD0EB12A3421C300F19CD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9AD0EB02A3421C300F19CD9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5553B0E62A34308600C78991 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9AD0E9E2A3421C200F19CD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5553B0D32A34308500C78991;
+			remoteInfo = RamenTimerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5553B0E92A34308600C78991 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5553B0E82A34308600C78991 /* RamenTimerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RamenTimerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5553B0D62A34308500C78991 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5553B0D82A34308500C78991 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5553B0DB2A34308500C78991 /* RamenTimerWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenTimerWidgetBundle.swift; sourceTree = "<group>"; };
+		5553B0DD2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenTimerWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		5553B0DF2A34308500C78991 /* RamenTimerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenTimerWidget.swift; sourceTree = "<group>"; };
+		5553B0E12A34308500C78991 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		5553B0E32A34308600C78991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5553B0E52A34308600C78991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9AD0EA62A3421C200F19CD9 /* Relicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliciousApp.swift; sourceTree = "<group>"; };
 		B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +63,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5553B0D12A34308500C78991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5553B0D92A34308500C78991 /* SwiftUI.framework in Frameworks */,
+				5553B0D72A34308500C78991 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9AD0EA32A3421C200F19CD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -32,10 +82,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5553B0D52A34308500C78991 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5553B0D62A34308500C78991 /* WidgetKit.framework */,
+				5553B0D82A34308500C78991 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5553B0DA2A34308500C78991 /* RamenTimerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5553B0DB2A34308500C78991 /* RamenTimerWidgetBundle.swift */,
+				5553B0DD2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift */,
+				5553B0DF2A34308500C78991 /* RamenTimerWidget.swift */,
+				5553B0E12A34308500C78991 /* AppIntent.swift */,
+				5553B0E32A34308600C78991 /* Assets.xcassets */,
+				5553B0E52A34308600C78991 /* Info.plist */,
+			);
+			path = RamenTimerWidget;
+			sourceTree = "<group>";
+		};
 		B9AD0E9D2A3421C200F19CD9 = {
 			isa = PBXGroup;
 			children = (
 				B9AD0EA82A3421C200F19CD9 /* Relicious */,
+				5553B0DA2A34308500C78991 /* RamenTimerWidget */,
+				5553B0D52A34308500C78991 /* Frameworks */,
 				B9AD0EA72A3421C200F19CD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B9AD0EA62A3421C200F19CD9 /* Relicious.app */,
+				5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +145,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5553B0D32A34308500C78991 /* RamenTimerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5553B0EC2A34308600C78991 /* Build configuration list for PBXNativeTarget "RamenTimerWidgetExtension" */;
+			buildPhases = (
+				5553B0D02A34308500C78991 /* Sources */,
+				5553B0D12A34308500C78991 /* Frameworks */,
+				5553B0D22A34308500C78991 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RamenTimerWidgetExtension;
+			productName = RamenTimerWidgetExtension;
+			productReference = 5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B9AD0EA52A3421C200F19CD9 /* Relicious */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9AD0EB42A3421C300F19CD9 /* Build configuration list for PBXNativeTarget "Relicious" */;
@@ -77,10 +169,12 @@
 				B9AD0EA22A3421C200F19CD9 /* Sources */,
 				B9AD0EA32A3421C200F19CD9 /* Frameworks */,
 				B9AD0EA42A3421C200F19CD9 /* Resources */,
+				5553B0E92A34308600C78991 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5553B0E72A34308600C78991 /* PBXTargetDependency */,
 			);
 			name = Relicious;
 			productName = Relicious;
@@ -94,9 +188,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					5553B0D32A34308500C78991 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					B9AD0EA52A3421C200F19CD9 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -116,11 +213,20 @@
 			projectRoot = "";
 			targets = (
 				B9AD0EA52A3421C200F19CD9 /* Relicious */,
+				5553B0D32A34308500C78991 /* RamenTimerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5553B0D22A34308500C78991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5553B0E42A34308600C78991 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9AD0EA42A3421C200F19CD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +239,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5553B0D02A34308500C78991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5553B0DE2A34308500C78991 /* RamenTimerWidgetLiveActivity.swift in Sources */,
+				5553B0E22A34308500C78991 /* AppIntent.swift in Sources */,
+				5553B0E02A34308500C78991 /* RamenTimerWidget.swift in Sources */,
+				5553B0DC2A34308500C78991 /* RamenTimerWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9AD0EA22A3421C200F19CD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +261,80 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5553B0E72A34308600C78991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5553B0D32A34308500C78991 /* RamenTimerWidgetExtension */;
+			targetProxy = 5553B0E62A34308600C78991 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5553B0EA2A34308600C78991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5BY5MQ6875;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RamenTimerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RamenTimerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.Relicious.RamenTimerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5553B0EB2A34308600C78991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5BY5MQ6875;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RamenTimerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RamenTimerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.Relicious.RamenTimerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B9AD0EB22A3421C300F19CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -262,6 +452,7 @@
 		B9AD0EB52A3421C300F19CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,6 +483,7 @@
 		B9AD0EB62A3421C300F19CD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +514,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5553B0EC2A34308600C78991 /* Build configuration list for PBXNativeTarget "RamenTimerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5553B0EA2A34308600C78991 /* Debug */,
+				5553B0EB2A34308600C78991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B9AD0EA12A3421C200F19CD9 /* Build configuration list for PBXProject "Relicious" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
