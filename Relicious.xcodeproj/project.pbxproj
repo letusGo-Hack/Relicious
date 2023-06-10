@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C00E2F02A3448E200EF2040 /* AddRamyunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00E2EF2A3448E200EF2040 /* AddRamyunView.swift */; };
 		5553B0D72A34308500C78991 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553B0D62A34308500C78991 /* WidgetKit.framework */; };
 		5553B0D92A34308500C78991 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553B0D82A34308500C78991 /* SwiftUI.framework */; };
 		5553B0DC2A34308500C78991 /* RamenTimerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0DB2A34308500C78991 /* RamenTimerWidgetBundle.swift */; };
@@ -21,6 +22,7 @@
 		5553B0F22A344AC400C78991 /* RamenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F02A344AC400C78991 /* RamenProvider.swift */; };
 		5553B0F42A344F3100C78991 /* Ramen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F32A344F3100C78991 /* Ramen.intentdefinition */; };
 		5553B0F52A344F3100C78991 /* Ramen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0F32A344F3100C78991 /* Ramen.intentdefinition */; };
+		B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E43492A343E6000F2B855 /* Ramyun.swift */; };
 		B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */; };
 		B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */; };
 		B9AD0EAE2A3421C300F19CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9AD0EAD2A3421C300F19CD9 /* Assets.xcassets */; };
@@ -52,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C00E2EF2A3448E200EF2040 /* AddRamyunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRamyunView.swift; sourceTree = "<group>"; };
 		5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RamenTimerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553B0D62A34308500C78991 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5553B0D82A34308500C78991 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -65,6 +68,7 @@
 		5553B0F02A344AC400C78991 /* RamenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamenProvider.swift; sourceTree = "<group>"; };
 		5553B0F32A344F3100C78991 /* Ramen.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Ramen.intentdefinition; sourceTree = "<group>"; };
 		5553B0F62A344F4A00C78991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B90E43492A343E6000F2B855 /* Ramyun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramyun.swift; sourceTree = "<group>"; };
 		B9AD0EA62A3421C200F19CD9 /* Relicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReliciousApp.swift; sourceTree = "<group>"; };
 		B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,14 @@
 			path = RamenTimerWidget;
 			sourceTree = "<group>";
 		};
+		B90E43482A343E3F00F2B855 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B90E43492A343E6000F2B855 /* Ramyun.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B9AD0E9D2A3421C200F19CD9 = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +152,12 @@
 			isa = PBXGroup;
 			children = (
 				5553B0F62A344F4A00C78991 /* Info.plist */,
+				B90E43482A343E3F00F2B855 /* Entity */,
 				B9AD0EA92A3421C200F19CD9 /* ReliciousApp.swift */,
 				B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */,
 				B9AD0EAD2A3421C300F19CD9 /* Assets.xcassets */,
 				B9AD0EAF2A3421C300F19CD9 /* Preview Content */,
+				3C00E2EF2A3448E200EF2040 /* AddRamyunView.swift */,
 			);
 			path = Relicious;
 			sourceTree = "<group>";
@@ -272,9 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5553B0F12A344AC400C78991 /* RamenProvider.swift in Sources */,
-				B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */,
 				5553B0F42A344F3100C78991 /* Ramen.intentdefinition in Sources */,
 				5553B0EE2A344A2A00C78991 /* RamenEntry.swift in Sources */,
+				B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */,
+				B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */,
+				3C00E2F02A3448E200EF2040 /* AddRamyunView.swift in Sources */,
 				B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

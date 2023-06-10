@@ -11,7 +11,7 @@ import SwiftUI
 struct ReliciousApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(ramyun: Ramyun(name: "진라면", time: 100))
         }
     }
 }
