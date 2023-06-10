@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @State var ramyun: [Ramyun] = []
-    @State var isRunnging = false
     
     var body: some View {
         NavigationView {
