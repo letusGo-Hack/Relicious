@@ -30,9 +30,7 @@ struct RamenTimerWidgetEntryView : View {
 
                         Spacer()
                         
-                        Button {
-                            
-                        } label: {
+                        Button(intent: LogDrinkIntent()) {
                             Image(systemName: "play.circle")
                                 .resizable()
                                 .frame(width: 30, height: 30)

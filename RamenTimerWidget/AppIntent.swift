@@ -15,4 +15,26 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     // An example configurable parameter.
     @Parameter(title: "Favorite Emoji", default: "😃")
     var favoriteEmoji: String
+    
+    
+}
+
+struct LogDrinkIntent: AppIntent {
+    init() {} //
+    
+    static var title: LocalizedStringResource = "Log a drink"
+    static var description = IntentDescription("Log a drink and its caffeine amount.")
+
+    
+    var rame: Ramen = .init(name: "", intakeTime: 0)
+
+    init(rame: Ramen) {
+        self.rame = rame
+    }
+
+    func perform() async throws -> some IntentResult {
+        Swift.print("## Called")
+//        await DrinksLogStore.shared.log(drink: drink)
+        return .result()
+    }
 }
