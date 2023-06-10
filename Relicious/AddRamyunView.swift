@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MultiPicker: View  {
 
-    typealias Label = String
-    typealias Entry = String
+    typealias Label = Int
+    typealias Entry = Int
     
-    let data: [ (Label, [Entry]) ]
-    @Binding var selection: [Entry]
+    let data: [ (String, [String]) ]
+    @Binding var selection: [Int]
 
     var body: some View {
         GeometryReader { geometry in
@@ -81,7 +81,7 @@ struct AddRamyunView: View {
         ("One", Array(0...59).map { "\($0) 분" }),
         ("Two", Array(0...59).map { "\($0) 초" })
     ]
-    @State var selection: [String] = [0, 0].map { "\($0)" }
+    @State var selection: [Int] = [0, 0]
     
     @Environment(\.dismiss) var dismiss
     
@@ -172,6 +172,17 @@ struct AddRamyunView: View {
             Spacer()
         }
         .padding([.leading, .trailing], 30)
+    }
+    
+    func setUserInfo(){
+        DispatchQueue.global().async {
+            var time = Int(selection[0]) * 60 + Int(selection[1])
+            
+            var user = Ramyun(name: name, time: time)
+            var propertyListEncoder = try? PropertyListEncoder().encode(user)
+            var userCoreData = UserDefaults.standard
+            userCoreData.set(propertyListEncoder, forKey: "Ramyun")
+        }
     }
 }
 
