@@ -30,9 +30,12 @@ struct RamenTimerWidgetEntryView : View {
 
                         Spacer()
                         
-                        Button {
-                            
-                        } label: {
+//                        Button {
+//                            Swift.print("## Called")
+//                        } label: {
+//
+//                        }
+                        Button(intent: LogDrinkIntent()) {
                             Image(systemName: "play.circle")
                                 .resizable()
                                 .frame(width: 30, height: 30)
@@ -56,8 +59,8 @@ struct RamenTimerWidget: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
-    RamenTimerWidget()
-} timeline: {
-    RamenEntry(ramen: Ramen.getRamen())
-}
+//#Preview(as: .systemSmall) {
+//    RamenTimerWidget()
+//} timeline: {
+//    RamenEntry(ramen: Ramen.getRamen())
+//}
