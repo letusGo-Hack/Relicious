@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-struct Ramyun: Identifiable {
+struct Ramyun: Identifiable, Codable {
     let id: UUID
     /// 라면 이름
     let name: String
@@ -19,7 +19,7 @@ struct Ramyun: Identifiable {
     // 라면 칼로리
     let calorie: Int?
     // 라면 시간
-    let time: Double
+    let time: Int
     
     var isRunnging: Bool = false
     
@@ -32,7 +32,7 @@ struct Ramyun: Identifiable {
         imageName: String? = nil,
         image: Data? = nil,
         calorie: Int? = nil,
-        time: Double
+        time: Int
     ) {
         self.id = UUID()
         self.name = name

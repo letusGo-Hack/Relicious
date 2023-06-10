@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C00E2F02A3448E200EF2040 /* AddRamyunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00E2EF2A3448E200EF2040 /* AddRamyunView.swift */; };
 		5553B0D72A34308500C78991 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553B0D62A34308500C78991 /* WidgetKit.framework */; };
 		5553B0D92A34308500C78991 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553B0D82A34308500C78991 /* SwiftUI.framework */; };
 		5553B0DC2A34308500C78991 /* RamenTimerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553B0DB2A34308500C78991 /* RamenTimerWidgetBundle.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C00E2EF2A3448E200EF2040 /* AddRamyunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRamyunView.swift; sourceTree = "<group>"; };
 		5553B0D42A34308500C78991 /* RamenTimerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RamenTimerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5553B0D62A34308500C78991 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5553B0D82A34308500C78991 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -141,6 +143,7 @@
 				B9AD0EAB2A3421C200F19CD9 /* ContentView.swift */,
 				B9AD0EAD2A3421C300F19CD9 /* Assets.xcassets */,
 				B9AD0EAF2A3421C300F19CD9 /* Preview Content */,
+				3C00E2EF2A3448E200EF2040 /* AddRamyunView.swift */,
 			);
 			path = Relicious;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				B90E434A2A343E6000F2B855 /* Ramyun.swift in Sources */,
 				B9AD0EAC2A3421C200F19CD9 /* ContentView.swift in Sources */,
+				3C00E2F02A3448E200EF2040 /* AddRamyunView.swift in Sources */,
 				B9AD0EAA2A3421C200F19CD9 /* ReliciousApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
