@@ -21,12 +21,6 @@ struct Ramyun: Identifiable, Codable {
     // 라면 시간
     let time: Int
     
-    var isRunnging: Bool = false
-    
-    var counter = 0
-    
-    var timer: Publishers.Autoconnect<Timer.TimerPublisher>?
-    
     init(
         name: String,
         imageName: String? = nil,

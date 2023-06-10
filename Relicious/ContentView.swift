@@ -6,105 +6,84 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
-    @State var ramyun: [Ramyun] = []
+    @State var ramyun: Ramyun
+    @State var timer: Publishers.Autoconnect<Timer.TimerPublisher>?
+    @State var isRunnging = false
+    @State var counter = 0
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(Array(ramyun.enumerated()), id: \.offset) { ramyun in
-                    VStack(alignment: .leading) {
-                        HStack(spacing: 8) {
-                            Text("🍜")
-                            Text(ramyun.element.name)
-                                .font(.system(size: 28))
-                                .foregroundStyle(Color(.label))
-                            Text(getTimeText(ramyun.element.time))
-                                .font(.system(size: 20))
-                                .foregroundStyle(Color(.label))
-                            Spacer()
-                            Button {
-                                if self.ramyun[safe: ramyun.offset] != nil {
-                                    let isRunnging = self.ramyun[ramyun.offset].isRunnging
-                                    self.ramyun[ramyun.offset].isRunnging = !isRunnging
-                                    if !isRunnging {
-                                        self.ramyun[ramyun.offset].timer = Timer
-                                            .publish(every: 1, on: .main, in: .common).autoconnect()
-                                    } else {
-                                        self.ramyun[ramyun.offset].timer = nil
-                                        self.ramyun[ramyun.offset].counter = 0
-                                    }
-                                }
-                            } label: {
-                                if ramyun.element.isRunnging {
-                                    ZStack {
-                                        ProgressBar(counter: ramyun.element.counter, countTo: Int(ramyun.element.time))
-                                        Image(systemName: "stop.circle.fill")
-                                            .resizable()
-                                            .frame(width: 78, height: 78)
-                                    }
-                                    .optionalOnReceive(ramyun.element.timer) { _ in
-                                        if (ramyun.element.counter < Int(ramyun.element.time)) {
-                                            self.ramyun[ramyun.offset].counter += 1
-                                        }
-                                    }
-                                } else {
-                                    Image(systemName:  "play.circle.fill")
-                                        .resizable()
-                                        .frame(width: 78, height: 78)
-                                }
-                                
-                            }
-                            .buttonStyle(PlainButtonStyle())
+            VStack(alignment: .leading) {
+                HStack(spacing: 8) {
+                    Text("🍜")
+                    Text(ramyun.name)
+                        .font(.system(size: 28))
+                        .foregroundStyle(Color(.label))
+                    Text(getTimeText(ramyun.time))
+                        .font(.system(size: 20))
+                        .foregroundStyle(Color(.label))
+                    Spacer()
+                    Button {
+                        let isRunnging = self.isRunnging
+                        self.isRunnging.toggle()
+                        
+                        if !isRunnging {
+                            self.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                        } else {
+                            self.timer = nil
+                            self.counter = 0
                         }
+                    } label: {
+                        if self.isRunnging {
+                            ZStack {
+                                ProgressBar(counter: self.counter, countTo: ramyun.time)
+                                Image(systemName: "stop.circle.fill")
+                                    .resizable()
+                                    .frame(width: 78, height: 78)
+                            }
+                            .optionalOnReceive(self.timer) { _ in
+                                if self.counter < self.ramyun.time {
+                                    self.counter += 1
+                                }
+                            }
+                        } else {
+                            Image(systemName:  "play.circle.fill")
+                                .resizable()
+                                .frame(width: 78, height: 78)
+                        }
+                        
                     }
-                    .padding([.top, .bottom], 20)
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
-            .listStyle(.plain)
-            .navigationBarTitle("🍜Relicious")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Edit") {
-                        print("Help tapped!")
-                    }
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {}, label: {
-                        Image(systemName: "plus")
-                    })
-                }
-            }
+            .padding([.top, .bottom], 20)
         }
-        .onAppear {
-            self.ramyun = [
-                .init(name: "신라면", time: 60),
-                .init(name: "진라면", time: 60)
-            ]
+        .navigationBarTitle("🍜Relicious")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Edit") {
+                    print("Help tapped!")
+                }
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {}, label: {
+                    Image(systemName: "plus")
+                })
+            }
         }
     }
     
     private func getTimeText(
-        _ time: Double
+        _ time: Int
     ) -> String {
         let minute = String(format: "%02d", Int(time / 60))
-        let seconds  = String(format: "%02d", Int(time.truncatingRemainder(dividingBy: 60)))
+        let seconds = String(format: "%02d", time % 60)
         return "\(minute) : \(seconds)"
-    }
-}
-
-#Preview {
-    ContentView(ramyun: [
-        .init(name: "신라면", time: 300)
-    ])
-}
-
-extension Array {
-    subscript (safe index: Int) -> Element? {
-        return indices ~= index ? self[index] : nil
     }
 }
 
