@@ -12,14 +12,34 @@ struct RamenTimerWidgetEntryView : View {
     var entry: RamenProvider.Entry
 
     var body: some View {
-        VStack {
-            Text("시간:")
-            Text("\(entry.ramen.time)")
+        VStack(spacing: 0) {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .clipShape(Circle())
 
-            Text("라면:")
-            Text(entry.ramen.name)
-        }
-        .containerBackground(.fill.tertiary, for: .widget)
+                    Spacer()
+
+                    HStack(spacing: 0) {
+                        VStack(spacing: 0) {
+                            Text(entry.ramen.name)
+                                .font(.system(size: 17, weight: .bold))
+
+                            Text("섭취 수: \(entry.ramen.intakeTime)")
+                                .font(.system(size: 14))
+                        }
+
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "play.circle")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                        }
+                    }
+                }
+                .containerBackground(.fill.tertiary, for: .widget)
     }
 }
 

@@ -15,10 +15,10 @@ struct RamenEntry: TimelineEntry {
 
 struct Ramen {
     let name: String
-    let time: Int
+    let intakeTime: Int
     
     static func getRamen() -> Ramen {
         
-        return Ramen(name: "진라면", time: 0)
+        return Ramen(name: "진라면", intakeTime: 0)
     }
 }
