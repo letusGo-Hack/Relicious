@@ -39,14 +39,30 @@ struct SimpleEntry: TimelineEntry {
 
 struct RamenTimerWidgetEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+        VStack(spacing: 0) {
+            Image(systemName: "photo")
+                .resizable()
+                .clipShape(Circle())
+            
+            Spacer()
+            
+            HStack(spacing: 0) {
+                VStack(spacing: 0) {
+                    Text("불닭볶음면")
+                        .font(.system(size: 17, weight: .bold))
+                    
+                    Text("섭취 수: 999")
+                        .font(.system(size: 14))
+                }
+                
+                Spacer()
+                
+                Image(systemName: "play.circle")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+            }
         }
         .containerBackground(.fill.tertiary, for: .widget)
     }
@@ -59,6 +75,9 @@ struct RamenTimerWidget: Widget {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             RamenTimerWidgetEntryView(entry: entry)
         }
+        .configurationDisplayName("라면 타이머")
+        .description("당신이 라면에게 투표하세요!")
+        .supportedFamilies([.systemSmall])
     }
 }
 
